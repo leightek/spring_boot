@@ -1,0 +1,13 @@
+package com.leightek.todo.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
+
+@Configuration
+public class ToDoConfig {
+    private Environment environment;
+
+    public ToDoConfig(Environment environment) {
+        this.environment = environment;
+    }
+}

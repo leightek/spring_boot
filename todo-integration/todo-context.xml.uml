@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>SpringIntegration</ID>
+  <OriginalElement>appContextPath=D:/Develop/Leigh/Spring/pro_spring_boot_2/todo-integration/src/main/resources/META-INF/spring/integration/todo-context.xml;appContextName=todo-context</OriginalElement>
+  <nodes>
+    <node x="308.0" y="-101.70119047619048">module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=filter</node>
+    <node x="0.0" y="-101.70119047619048">module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=input</node>
+    <node x="770.0" y="-101.70119047619048">module=todo-integration;tag=int:logging-channel-adapter;offset=825</node>
+    <node x="616.0" y="-101.70119047619048">module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=log</node>
+    <node x="462.0" y="-101.70119047619048">module=todo-integration;tag=int:transformer;offset=676</node>
+    <node x="154.0" y="-101.70119047619048">module=todo-integration;tag=int:filter;offset=544</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="module=todo-integration;tag=int:transformer;offset=676" target="module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=log">
+      <point x="50.0" y="-0.0" />
+      <point x="-50.0" y="-0.0" />
+    </edge>
+    <edge source="module=todo-integration;tag=int:filter;offset=544" target="module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=filter">
+      <point x="50.0" y="-0.0" />
+      <point x="-50.0" y="-0.0" />
+    </edge>
+    <edge source="module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=input" target="module=todo-integration;tag=int:filter;offset=544">
+      <point x="50.0" y="-0.0" />
+      <point x="-50.0" y="-0.0" />
+    </edge>
+    <edge source="module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=log" target="module=todo-integration;tag=int:logging-channel-adapter;offset=825">
+      <point x="50.0" y="-0.0" />
+      <point x="-50.0" y="-0.0" />
+    </edge>
+    <edge source="module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=filter" target="module=todo-integration;tag=int:transformer;offset=676">
+      <point x="50.0" y="-0.0" />
+      <point x="-50.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8977528089887641" x="435.0" y="-53.5" />
+  <SelectedNodes>
+    <node>module=todo-integration;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=filter</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Show Labels</Category>
+  </Categories>
+</Diagram>
+
