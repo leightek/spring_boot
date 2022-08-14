@@ -1,0 +1,36 @@
+package KieRule
+
+import com.leightek.drools.droolsengine.Order;
+
+rule "VISA"
+
+when
+orderObject : Order(cardType=="VISA" && price > 1000);
+then
+orderObject.setDiscount(10);
+end;
+
+rule "MASTERCARD"
+
+when
+orderObject : Order(cardType=="MASTERCARD" && price > 1000);
+then
+orderObject.setDiscount(10);
+end;
+
+rule "DEBIT"
+
+when
+orderObject : Order(cardType=="DEBIT" && price > 800);
+then
+orderObject.setDiscount(15);
+end;
+
+
+rule "AE"
+
+when
+orderObject : Order(cardType=="AE" && price > 1200);
+then
+orderObject.setDiscount(5);
+end;
